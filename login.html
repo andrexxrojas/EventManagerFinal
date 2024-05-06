@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS//style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm" action="" method="post">
+            <h3>Login Now</h3>
+            <input type="email" id="email" required placeholder="Enter your email">
+            <input type="password" id="password" required placeholder="Enter your password">
+            <input type="submit" id="submit" value="Login" class="form-btn">
+            <p>Don't have an account? <a href="signup.html">Register now!</a></p>
+        </form>
+    </div>
+    <script type="module" src="/JS/loginScript.js"></script>
+    <script type="text/javascript" src = '/JS/cookie.js'></script>    
+	<script type="text/javascript" src = '/JS/calendarUtils.js'></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
+</html>

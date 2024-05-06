@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navStyle.css">
+    <link rel="stylesheet" href="/CSS/boardStyle.css">
+	<link rel="stylesheet" href="/CSS/userBoard.css">
+    <title>Event Manager | Meetings</title>
+</head>
+<body data-role-K = "guest">
+	    <div class="navContainer">
+        <nav>
+            <div class="main">
+            </div>    
+            <ul>
+                <div class="block">
+                    <li>
+                        <i class="fa-solid fa-layer-group fa-xl"></i>
+                        <p><a href="table-guest.html">Table</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake"></i>
+                        <p><a>Meetings</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-google-drive"></i>
+                        <p><a href="https://drive.google.com/drive/folders/1OypKVcTC9oQ7TvXFOlQ-pWorupsU9QPg?usp=sharing" target="_blank">Drive</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p><a href="calendar-guest.html">Calendar</a></p>
+                    </li>
+    
+                <li>
+                    <i class="fa fa-sign-out"></i>
+                    <p id="signoutbutton">Logout</p>
+                </li>
+                
+            </ul>
+    
+            <div class="navBtn">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+        </nav>
+    </div>
+	
+	<div class="container" style="width:100%;margin-right:50px;height:100%;">
+	
+				<div class="upper-row">
+					<div style="float:left;padding-bottom:15px;">
+						<h2>Meetings</h2>
+					</div>
+			</div>
+	<div class="meeting-container">
+			<div class="bottom-row">
+				<table class="cust-table">
+					<tr>
+						<th>Meeting Name</th>
+						<th>Meeting Description</th>
+						<th>Roles Attending</th>
+						<th>Start Time</th>
+						<th>End Time</th>
+						<th>Link</th>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		</div>
+	
+		<div class ="add-meeting-container">
+			<div class="meeting-container-form">
+				<h2>New Meeting</h2>
+				<form action="" method="post">
+					<label for="meet-desc-new">Meeting Name:<span style="color:red">*</span></label><br>
+					<input type="text" id="meet-name-new" class="meet-name-new" required>
+					<label for="meet-desc-new">Meeting Description:</label><br>
+					<input type="textarea" id="meet-desc-new" class="meet-desc-new">
+					<br>
+
+					<label for="meet-dtime-new">Start Schedule:<span style="color:red">*</span></label><br>
+					<input type="datetime-local" id="meet-dtime-start-new" class="meet-dtime-new" required><br>
+					<label for="meet-dtime-new">End Schedule:<span style="color:red">*</span></label><br>
+					<input type="datetime-local" id="meet-dtime-end-new" class="meet-dtime-new" required><br>
+
+					<div class="checkboxes" id="add-checkboxes">
+						<input type="checkbox" id="admin" class="checkbox-elmt" value="">
+						<label for="admin">Admin</label><br>
+						<input type="checkbox" id="member" class="checkbox-elmt" value="">
+						<label for="member">Member</label><br>
+						<input type="checkbox" id="guest" class="checkbox-elmt" value="">
+						<label for="guest">Guest</label><br>
+					</div>
+					
+					<div style="float:left; margin-right:1em"><input class="cancel-btn"type="button" value="Cancel"></div>
+					<div style="float:right; margin-left:1em"><input class="save-new-btn" type="button"value="Create"></div>
+					
+				</form> 
+			</div>
+		</div>
+	
+		<div class ="edit-meeting-container">
+			<div class="edit-container-form">
+				<h2>Edit Meeting</h2>
+				<form action="" method="post">
+					<label for="meet-name-edit">Meeting Name:<span style="color:red">*</span></label><br>
+					<input type="text" id="meet-name-edit" class="meet-name-edit" required>
+					<label for="meet-desc-edit">Meeting Description:</label><br>
+					<input type="textarea" id="meet-desc-edit" class="meet-desc-edit">
+					
+					<label for="meet-dtime-edit">Start Schedule:<span style="color:red">*</span></label><br>
+					<input type="datetime-local" id="meet-dtime-start-edit" class="meet-dtime-edit" required><br>
+					<label for="meet-dtime-edit">End Schedule:<span style="color:red">*</span></label><br>
+					<input type="datetime-local" id="meet-dtime-end-edit" class="meet-dtime-edit" required><br>
+					
+					<div class="checkboxes" id="edit-checkboxes">
+						<input type="checkbox" id="admin" class="checkbox-elmt" value="">
+						<label for="admin">Admin</label><br>
+						<input type="checkbox" id="member" class="checkbox-elmt" value="">
+						<label for="member">Member</label><br>
+						<input type="checkbox" id="guest" class="checkbox-elmt" value="">
+						<label for="guest">Guest</label><br>
+					</div>
+					<div style="float:left; margin-right:1em">
+						<input class="cancel-btn"type="button" value="Cancel">					
+						<input class="save-edit-btn" type="button" value="Save Changes">
+					</div>
+					<div style="float:right; margin-left:1em"><input class="delete-btn"type="button" value="Delete Meeting"></div>
+					
+				</form> 
+			</div>
+		</div>
+
+	<script src="/JS/boardScript.js"></script>
+    <script src="/JS/navScript.js"></script>
+	<script type="module"src="/JS/meetScript.js"></script>
+	<script type="text/javascript" src = '/JS/redirectScript.js'></script>
+	<script type="module" src="/JS/logoutScript.js"></script>
+	<script type="text/javascript" src = '/JS/cookie.js'></script>
+</body>
+
+</html>

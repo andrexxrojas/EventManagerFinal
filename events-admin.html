@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager | Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navStyle.css">
+    <link rel="stylesheet" href="/CSS/eventStyle.css">
+</head>
+<body data-role-K = "admin">
+    <div class="navContainer">
+        <nav>
+            <div class="main">
+            </div>
+    
+            <ul>
+                <div class="block">
+                    <li>
+                        <i class="fa-solid fa-house fa-xl"></i>
+                        <p><a href="admin-dashboard.html">Hub</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake"></i>
+                        <p><a href="priv-meetings">Meetings</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-equals"></i>
+                        <p><a>Events</a></p>
+                    </li>
+					<li>
+                        <i class="fa-brands fa-google-drive"></i>
+                        <p><a href="https://drive.google.com/drive/folders/1NNGmlc2Ys8rYFZG_rdhYZBkqSFsYzE3S?usp=sharing" target="_blank">Drive</a></p>
+                    </li>
+					<li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p><a href="calendar-admin.html">Calendar</a></p>
+                    </li>
+                </div>
+    
+                <li>
+                    <i class="fa fa-sign-out"></i>
+                    <p id="signoutbutton">Logout</p>
+                </li>
+                
+            </ul>
+    
+            <div class="navBtn">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h5>Events</h5>
+
+        <div class="extraContainer">
+            <div class="scheduleBox">
+                <h4>Schedule an event</h4>
+                <span style="color:red">*</span>
+                <input id="title" type="text" placeholder="Enter title" required>
+                <h3>Start Time<span style="color:red"> *</span></h3>
+                <div class="timeContainer" id = "time-start">
+                    <div>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <input id="start-date" type="date" required>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <input id="start-time" type="time" required>
+                    </div>
+                </div>
+                <h3>End Time<span style="color:red"> *</span></h4>
+                    <div class="timeContainer" id = "end-start">
+                        <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input id="end-date" type="date" required>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-clock "></i>
+                            <input id="end-time" type="time" required>
+                        </div>
+                    </div>
+                <h3>Description<span style="color:red"> *</span></h3>
+                <textarea name="" id="description" cols="30" rows="10" wrap="physical" required>
+                </textarea>
+    
+                <button id="submitBtn">Submit</button>
+            </div>
+    
+            <div class="meetingsContainer">
+            </div>
+        </div> 
+    </div>
+
+    <script src="/JS/navScript.js"></script>
+    <script type="module" src="/JS/eventsScript.js"></script>
+    <script type="text/javascript" src = '/JS/cookie.js'></script>    
+	<script type="text/javascript" src = '/JS/calendarUtils.js'></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <script type="text/javascript" src = '/JS/redirectScript.js'></script>
+	<script type="module" src="/JS/logoutScript.js"></script>
+</body>
+</html>

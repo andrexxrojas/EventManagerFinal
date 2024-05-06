@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    display: flex;
+}
+
+.container{
+    margin-top: 70px;
+}
+
+.container h5{
+    font-family: "Inter", sans-serif;
+    font-size: 23.04px;
+    margin: 0 0 30px 0;
+}
+
+.searchBar{
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid #44546F;
+    border-radius: 5px;
+    width: 160px;
+}
+
+.container input[type="text"]{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    width: 100px;
+}
+
+.searchBar i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.groupTask{
+    background-color: #F7F8F9;
+    width: 220px;
+    height: 963px;
+    min-height: auto;
+    min-width: auto;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+.groupTask #title{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.group{
+    background-color: #FFFFFF;
+    width: 197px;
+    min-height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    user-select: none;
+    transition: min-height 0.3s ease;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+    margin-bottom: 5px;
+}
+
+.taskList{
+    display: none;
+}
+
+.groupTitle p{
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    max-width: 180px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.groupTitle i{
+    transition: 0.3s cubic-bezier(.17,.67,.42,1.04);
+}
+
+.groupTitle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(.17,.67,.42,1.04);
+}
+
+.group .date{
+    display: none;
+}
+
+.group .date div{
+    display: flex;
+    align-items: center;
+}
+
+.date div .dueDate{
+    background-color: #F7F8F9;
+    border: 1px solid transparent;
+    outline: none;
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+}
+
+.group .date div:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.group .date div label{
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.group .date div{
+    display: flex;
+    gap: 15px;
+}
+
+.group.active{
+    height: auto;
+}
+
+.group.active .date{
+    display: block;
+}
+
+.group.active .groupTitle i{
+    transform: rotate(90deg);
+}
+
+.group.active .groupTitle{
+    margin-bottom: 10px;
+}
+
+.addGroupBtn{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+}
+
+.addForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #F7F8F9;
+    color: #000000;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+}
+
+.addGroupContainer{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.addGroupContainer input[type="text"]{
+    width: 160px;
+    height: 20px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+    margin-bottom: 20px;
+}
+
+.tableContainer{
+    display: flex;
+    gap: 10px;
+    width: calc(100vw - 170px);
+    margin-right: 50px;
+}
+
+.tableExtraContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: calc(100vw - 465px);
+    height: 100%;
+}
+
+.table{
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #F7F8F9;
+    min-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+.table .titleContainer p{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+}
+
+.table .titleContainer{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.table .titleContainer .tableDueDate{
+    color: #8b8e94;
+}
+
+.contentTable{
+    border: 1px solid pink;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.contentTable tbody tr{
+    border: 1px solid #8b8e94;
+
+    height: 40px;
+}
+
+.contentTable tbody tr td{
+    padding: 10px;
+}
+
+.contentTable tbody tr #taskProgress{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#taskProgress .custom-select{
+    width: fit-content;
+}
+
+.custom-select select{
+    background-color: #D0D4DB;
+    border: 1px solid #D0D4DB;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    outline: none;
+    padding: 5px;
+    appearance: none;
+}
+
+.createNewTask{
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    margin-top: 5px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.createNewTask.active{
+    background-color: #FFFFFF;
+    border-color: 2px solid #E3651D;
+}
+
+.createNewTask.active .newBox{
+    display: block;
+}
+
+.createNewTask.active i{
+    color: #FFFFFF;
+}
+
+.createNewTask i{
+    padding-top: 1.5px;
+}
+
+.createNewTask .newBox{
+    position: absolute;
+    left: 5px;
+    z-index: 1;
+    display: none;
+}
+
+.createNewTask .newBox input[type="text"]{
+    height: 100%;
+    width: 200px;
+}
+
+

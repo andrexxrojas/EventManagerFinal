@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    display: flex;
+}
+
+.container{
+    margin-top: 70px;
+}
+
+.container h5{
+    font-family: "Inter", sans-serif;
+    font-size: 23.04px;
+    margin: 0 0 30px 0;
+}
+
+.searchBar{
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid #44546F;
+    border-radius: 5px;
+    width: 160px;
+}
+
+.container input[type="text"]{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    width: 100px;
+}
+
+.searchBar i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boardContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.board{
+    background-color: #F7F8F9;
+    border-radius: 5px;
+    width: 270px;
+    height: 488px;
+    padding: 15px;
+}
+
+.board p{   
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.board .box{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 245px;
+    height: 50px;
+    padding: 12px;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+}
+
+.board .box:hover{
+    background-color: #e9ebee;
+}
+
+.box .boxTitle{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.box .boxTag{
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color:rgba(0, 0, 0,0.6);
+    background-color: #F8E6A0;
+    border-radius: 2.5px;
+    width: fit-content;
+    padding: 2px 3px;
+}
+
+.list{
+    width: 100%;
+    height: 100%;
+}
+
+.draggable.dragging{
+    opacity: .5;
+}

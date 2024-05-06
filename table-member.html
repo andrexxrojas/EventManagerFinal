@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navStyle.css">
+    <link rel="stylesheet" href="/CSS/tableStyle.css">
+    <title>Event Manager | Table</title>
+</head>
+<body data-role-K = "member">
+    
+    <div class="navContainer">
+        <nav>
+            <div class="main">
+            </div>
+    
+            <ul>
+                <div class="block">
+                    <li>
+                        <i class="fa-solid fa-house fa-xl"></i>
+                        <p><a href="hub.html">Hub</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-layer-group fa-xl"></i>
+                        <p><a>Table</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake"></i>
+                        <p><a href="meetings-member.html">Meetings</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-equals"></i>
+                        <p><a href="events-member.html">Events</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-google-drive"></i>
+                        <p><a href="https://drive.google.com/drive/folders/1ylotaEfz81MUgO7JI8hIwVPgELn0KP6y?usp=sharing" target="_blank">Drive</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p><a href="calendar-member.html">Calendar</a></p>
+                    </li>
+                </div>
+    
+                <li>
+                    <i class="fa fa-sign-out"></i>
+                    <p id="signoutbutton">Logout</p>
+                </li>
+                
+            </ul>
+    
+            <div class="navBtn">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h5>Table view</h5>
+
+        <div class="searchBar">
+            <input type="text" id="search-bar-text" placeholder="" onkeyup="search()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        
+        <div class="tableContainer">
+            <div class="groupTask">
+                <p id="title">Groups</p>
+
+                <div class="addGroupContainer">
+                    <input id="groupTitleText" type="text">
+                    <div class="addGroupBtn">+</div>
+                </div>
+
+                <!-- <div class="group">
+                    <div class="groupTitle">
+                        <div class="addTaskBtn"><span>+</span></div>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <p>UI/UX and another thing i want to do</p>
+                    </div>
+
+                    <div class="taskList">
+                        <div class="task">
+                            Find the correct font styles for the style and another thing
+                        </div>
+                        <div class="task">
+                            Design the user interface for client viewing
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="tableExtraContainer">
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="/JS/navScript.js"></script>
+    <script type="text/javascript" src = '/JS/calendarUtils.js'></script>
+    <script type="module" src="/JS/tableScript.js"></script>
+    <script type="text/javascript" src = '/JS/redirectScript.js'></script>
+	<script type="module" src="/JS/logoutScript.js"></script>
+    <script type="text/javascript" src = '/JS/cookie.js'></script>
+</body>
+</html>

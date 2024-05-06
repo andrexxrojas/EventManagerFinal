@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    display: flex;
+}
+
+.container{
+    margin-top: 70px;
+}
+
+.container h5{
+    font-family: "Inter", sans-serif;
+    font-size: 23.04px;
+    margin: 0 0 30px 0;
+}
+
+.scheduleBox{
+    background-color: #F7F8F9;
+    padding: 15px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.scheduleBox h4{
+    margin: 0 0 20px 0;
+    font-family: "Inter", sans-serif;
+    font-size: 19.2px;
+    font-weight: 600;
+}
+
+.scheduleBox input[type="text"]{
+    border-radius: 5px;
+}
+
+#title{
+    width: 350px;
+    height: 10px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+    margin-bottom: 20px;
+}
+
+.timeContainer{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.timeContainer div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeContainer div input{
+    width: 130px;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+    padding: 15px;
+}
+
+#date{
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+}
+
+#date::-webkit-calendar-picker-indicator{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: transparent;
+    background: transparent;
+}
+
+#time{
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+}
+
+#time::-webkit-calendar-picker-indicator{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: transparent;
+    background: transparent;
+}
+
+.container h3{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 19.2px;
+    font-weight: 600;
+}
+
+#description{
+    width: 340px;
+    height: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0,0.1));
+    resize: none;
+    margin-bottom: 30px;
+}
+
+#for-title{
+    float:left
+}
+
+#for-editdel{
+    float:right;
+    display:flex;
+}
+
+#submitBtn{
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 370px;
+}
+
+#edit-event-button, #remove-event-button{
+    margin:10px;
+}
+
+#edit-event-button:hover, #remove-event-button:hover{
+    cursor:pointer;
+}
+
+.extraContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.event-d{
+    height: 300px;
+    width: 350px;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.header-btns{
+    margin-bottom:1.5em
+}
+
+.description{ 
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 500;
+}
+
+.meetingDate, .meetingTime{
+    font-family: "Inter", sans-serif;
+    font-size: 13.33px;
+    font-weight: 600;
+}
+
+.description{
+    margin-bottom: 40px;
+}
+
+.meetingDate{
+    position: absolute;
+
+    bottom: 0px;
+    left: 15px;
+}
+
+.meetingTime{
+    position: absolute;
+
+    bottom: 0;
+    right: 15px;
+}
+
+.meetingsContainer{
+    width: 50vw;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-row-gap: none;
+    
+}
+
+@media only screen and (max-width: 900px){
+    .extraContainer{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1320px){
+    .meetingsContainer{
+        flex-direction: column;
+    }
+    .event-d{
+        height: 100;
+    }
+}

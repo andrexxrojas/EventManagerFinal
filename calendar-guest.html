@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navStyle.css">
+    <link rel="stylesheet" href="/CSS/boardStyle.css">
+	<link rel="stylesheet" href="/CSS/userBoard.css">
+    <title>Event Manager | Calendar</title>
+</head>
+<body data-role-K = "guest">
+	<div class="navContainer">
+        <nav style="margin-right:0">
+            <div class="main">
+            </div>
+    
+            <ul>
+                <div class="block">
+                    <li>
+                        <i class="fa-solid fa-layer-group fa-xl"></i>
+                        <p><a href="table-guest.html">Table</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake"></i>
+                        <p><a href="meetings-guest.html">Meetings</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-google-drive"></i>
+                        <p><a href="https://drive.google.com/drive/folders/1OypKVcTC9oQ7TvXFOlQ-pWorupsU9QPg?usp=sharing" target="_blank">Drive</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p><a>Calendar</a></p>
+                    </li>
+                </div>
+    
+                <li>
+                    <i class="fa fa-sign-out"></i>
+                    <p id="signoutbutton">Logout</p>
+                </li>
+                
+            </ul>
+    
+            <div class="navBtn">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+        </nav>
+    </div>
+	
+	<div class="container" style="width:100%;height:auto;margin:0">
+		<iframe style="width:100%;height:100%;" src="https://calendar.google.com/calendar/embed?src=6a56a95b071dcf30ed7709246064b33dfd7342b74c58bc10d178072e43b191f5%40group.calendar.google.com&ctz=Asia%2FManila" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<script src="/JS/boardScript.js"></script>
+    <script src="/JS/navScript.js"></script>
+    <script type="text/javascript" src = '/JS/redirectScript.js'></script>
+	<script type="module" src="/JS/logoutScript.js"></script>
+    <script type="text/javascript" src = '/JS/cookie.js'></script>
+</body>
+
+</html>
